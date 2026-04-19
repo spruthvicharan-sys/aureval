@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const BASE = import.meta.env.VITE_API_URL || 'https://aureval.onrender.com';
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: `${BASE}/api`,
   timeout: 60000,
   headers: { 'Content-Type': 'application/json' },
 });
